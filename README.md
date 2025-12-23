@@ -1,4 +1,4 @@
-# xxscat
+# xsscat
 > a simple script to demonstrate an xss attack
 
 ### how to use:
